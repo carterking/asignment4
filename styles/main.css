@@ -36,18 +36,11 @@ header {
     background: #fff
 }
 
-footer {
-    background: lightseagreen;
-}
-
-ul {
-    list-style: none
-}
-
 nav ul {
     margin: 0;
     padding: 10px;
-    font-size: 20px
+    font-size: 20px;
+    list-style: none
 }
 
 nav li {
@@ -111,14 +104,27 @@ section img {
     flex-grow: 1;
 }
 
-header nav ul,
-footer nav ul {
+header nav ul {
     display: flex;
 }
 
-footer nav p a {
+.credit {
+    display: flex;
+    margin: 0 15px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer a {
     text-decoration: underline;
-    color: blue;
+}
+
+footer {
+    background: #222528;
+}
+
+footer p, footer a {
+    color: #fff;
 }
 
 .language-literacy {
@@ -213,7 +219,7 @@ footer nav p a {
       color: #fff;
   }
 
-  .contact-page p {
+  form p {
       margin-bottom: 40px;
   }
 
@@ -275,8 +281,6 @@ footer nav p a {
 
 @media screen and (max-width: 650px) {
     header nav ul,
-    footer nav ul,
-    footer nav p,
     .lit-row {
         flex-direction: column;
     }
@@ -292,9 +296,8 @@ footer nav p a {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .footer-column h3,
-    p {
-        text-align: center;
+    .credit {
+        flex-direction: column;
     }
 }
 
